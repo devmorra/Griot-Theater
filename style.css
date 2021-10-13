@@ -1,0 +1,225 @@
+*{
+    font-family: roboto;
+    src: url(https://fonts.google.com/specimen/Roboto);
+}
+
+body{
+    margin: 0;
+}
+.background{
+    width: 100vw;
+}
+
+.featuredText::after{
+    content: "Featured Shows";
+    color: white;
+    position: absolute;
+    width: auto;
+    font-size: 8vw;
+    top: 10vw;
+    left: 25vw;
+    text-align: center;
+}
+
+.container{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar{
+    display: grid;
+    grid-template-columns: 20vw auto;
+    background-color: #222;
+    align-items: center;
+    color: white;
+    width: 100%;
+    padding-left: 15px;
+    height: 50px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.theater{
+    font-size: 28pt;
+}
+
+.navbarOptions{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    width: 80%;
+    /* grid-template-columns: 20vw auto; */
+    justify-content: space-around;
+    
+
+}
+
+.showsList{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.date{
+    margin-top: 8vw;
+    border: 1px solid lightgrey;
+    padding-left: 4vw;
+    text-align: left;
+    width: 50%;
+}
+
+.featuredShows{
+    display: flex;
+    max-width: 100%;
+    max-height: auto;
+    object-fit: contain;
+    align-items: center;
+}
+.hoverInfo{
+    position: relative;
+    top: -120%;
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16pt;
+}
+.playContainer{
+    display: flex;
+    flex-direction: row;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border: 2px solid #cccccc;
+    border-radius: 3px;
+    padding: 1%;
+    width: 80vw;
+    /* border: 1px solid blue; */
+}
+.playImageContainer{
+    max-width: 30%;
+    /* padding: 5px; */
+    object-fit: contain;
+    /* height: auto; */
+}
+.playImage{
+    max-width: 100%;
+    object-fit: contain;
+}
+
+/* https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_image_overlay_slideleft */
+.imageOverlay {
+    position: relative;
+    top: -100%;
+    left: 0;
+    right: 0;
+    background-color: #008CBA;
+    overflow: hidden;
+    width: 0;
+    height: 100%;
+    transition: .5s ease;
+    z-index: 0;
+}
+
+.playImage:hover + .imageOverlay {
+    width: 500%;
+}
+
+.imageOverlay:hover{
+    width: 500%
+}
+
+.overlayText {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+  }
+
+
+
+.playInfo{
+    margin-left: 15px;
+    width: 100%;
+    font-size: 11pt;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: left;
+}
+.playTitle{
+    font-size: 18pt;
+}
+.playSeparator{
+    height: 2px;
+    background-color: #dddddd;
+    width: 120%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.readMoreFrame{
+    display: flex;
+    align-items: center;
+    /* border: 1px solid green; */
+    width: 20%;
+}
+.readMoreButton{
+    height: 20%;
+    color: white;
+    background-color: darkgoldenrod;
+    
+}
+.readMoreButton:hover{
+    cursor: pointer;
+}
+.footer{
+    padding: 50px;
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-around; */
+    background-color: black;
+    width: 100%;
+}
+.footerSection{
+    display: flex;
+    flex-direction: column;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    /* justify-content: space-around; */
+}
+.footerSectionHeader, .footerInfo{
+    color: white;
+    font-family: Arial;
+}
+.footerSectionHeader{
+    font-size: 28pt;
+}
+
+.footerInfoContainer{
+    padding-top: 30px;
+    display: grid;
+    grid-template-rows: 50px 50px 50px 50px;
+    height: 100%;
+}
+
+.footerInfoContainer a{
+    color: white;
+}
+
+.footerInfo{
+    color: white;
+    font-size: 11pt;
+}
+
+.map{
+    width:45vw;
+    padding: 20px;
+}
